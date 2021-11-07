@@ -26,8 +26,8 @@ const routes: Routes = [
   declarations: [],
   imports: [
     CommonModule,
-    RouterModule.forRoot( routes )
+    RouterModule.forRoot( routes ) //Import RouterModule with array
   ],
-  exports: [ RouterModule ]
+  exports: [ RouterModule ] // For use Module in app.module.ts
 })
 export class AppRoutingModule { }
