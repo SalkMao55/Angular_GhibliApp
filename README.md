@@ -2,26 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
 
-## Development server
+## Application
+This application is a personal development and it takes like reference the applicacion #8 from Agular Course of Fernado Herrera
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Differences
+* This use de Ghibli Api and works with film's information of the company: https://ghibliapi.herokuapp.com/?fbclid=IwAR3C9kk7hrs90pmc12mnBT1PyL32YBlzb3fdLc5NRJ76SRK8pXEdBR8AwzE#section/Studio-Ghibli-API
+* Use a different style at the library Swiper
+* Use a different style at the navbar.
