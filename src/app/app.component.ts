@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FilmsService } from './services/films.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,7 @@ import { FilmsService } from './services/films.service';
 })
 export class AppComponent {
   title = 'ghibliApp';
-  constructor (private filmService: FilmsService){
-    this.filmService.getFlims().subscribe(resp=>console.log(resp));
+  constructor (){
+
   }
 }

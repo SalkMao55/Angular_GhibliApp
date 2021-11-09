@@ -1,0 +1,37 @@
+@keyframes fade-in {
+    // We can't animate the property "display", for this reason in the example we don't use
+    //  percentage between "from" and "to" 
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.fade-in {
+    animation: fade-in 300ms ease-in-out forwards;
+}
+//Animation transitions
+@keyframes fade-out {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+    99% {
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+//Applying transitions 
+.fade-out {
+    animation: fade-out 300ms ease-in-out forwards;
+}

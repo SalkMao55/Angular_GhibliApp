@@ -1,0 +1,71 @@
+html {
+    font-size: 100%;
+    //property allows us to include the padding and border in an element's total width and height.
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans',sans-serif;
+    font-size: $font-med;
+    font-weight: 300; // Bold or light text
+    color: $grayishBlue;
+    line-height: 1.3; // space between lines text
+}
+
+// Style Links Menu
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+// Flexbox
+.flex {
+    // Flex model, put every element of content one by one.
+    display: flex;
+    //The next subclass with "display: flex" lets horizontal alignment
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+    // flex-aling-item-center
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+//Buttons
+button, .button {
+    padding: 0.875rem 2.1875rem;
+    background: linear-gradient(to right, $limeGreen,$brightCyan);
+    border: 0;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    color: $white;
+    font-weight: 400;
+}
+
+// Para mostrar los links dependiendo si la pagina se muestra en Movil
+//   o Desktop, se implementan las siguientes clases
+
+// Visibility
+.hide-for-mobile {
+    // Hide for tablet and mobile
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    // Hide for desktop viewport widths
+    @include breakpoint-up(large){
+        display: none;
+    }
+}

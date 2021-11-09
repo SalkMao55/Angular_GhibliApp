@@ -1,0 +1,119 @@
+.header {
+
+	// Use of open class for the hamburger | open styles
+	&.open {
+		// Open Class will affect header__menu Class in link <a> btnHamrger
+		.header__menu {
+			// Transform the spans
+			> span:first-child { // First Span
+				transform: rotate(45deg);
+			}
+
+			> span:nth-child(2) { // Center Span
+				opacity: 0;
+			}
+
+			> span:last-child { //Last Span
+				transform: rotate(-45deg);
+			}
+
+		}
+	}
+
+	.overlay {
+		opacity: 0;
+		position: fixed;
+		top: 5.5rem;//Height of NAV barr 88px
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+		// background-color: $darkBlue;
+		background-image: linear-gradient($darkBlue,transparent);
+	}
+	
+	nav {
+		padding: 1.0625rem 1.5rem;//Paddin: Y X;
+		// top and bottom paddings are 1.0625rem 
+		// right and left paddings are 1.5rem
+	}
+
+	&__logo {
+		img {
+			width: 8.8125rem; // 141 px
+			height: 3.125rem; //  50 px
+		}
+	}
+
+	// Mobile menu
+	&__menu {
+		// Direct child selector
+		> span { // Black lines Menu
+			display: block;
+			width: 1.625em;
+			height: 0.125em;
+			background-color: $darkBlue;
+			transition: all 300ms ease-in-out; // Time animation
+			transform-origin: 0.1875em 0.0625em; // the coordinates for span lines
+			//White lines (marging between spans)
+			&:not(:last-child){
+				margin-bottom: 0.3125em;
+			}
+		}
+	}
+
+	// Styles for links menu
+	&__links {
+		a {
+			position: relative;  // For color Border in every link
+			font-size: $font-sm;
+			color: $grayishBlue; // Base color links
+			transition: color 300ms ease-in-out; // Delay chance color hover
+			// Right margin for Links, less the last link
+			&:not(:last-child) {
+				margin-right: 2rem;
+			}
+
+			// Structure for LINE HOVER, down links
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				height: 0.3125rem;
+				left: 0;
+				right: 0;
+				bottom: -1.875rem;
+				// Color line
+				background: linear-gradient(to right, $limeGreen,$brightCyan);
+				// Hide with opacity
+				opacity: 0;
+				// Transition time for change of opacity
+				transition: opacity 300ms ease-in-out;
+			}
+
+			// Hover, change color with pointer on link
+			&:hover {
+				color: $darkBlue;
+
+				// Show line color changing opacity to 1
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	// Style for search in the header, exactly in the "Search" button
+	&__cta {
+		font-size: $font-sm;
+		color: $white;
+		transition: opacity 300ms ease-in-out;
+
+		// sub-class style for this class
+		//This affects the botton when the user hovers over the button with the cursor (mouse pointer)
+		&:hover {
+			opacity: 0.75;
+		}
+	}
+
+}
+

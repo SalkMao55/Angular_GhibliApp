@@ -1,1 +1,28 @@
-<p>navbar works!</p>
+<header class="header" [class.open]="addOpen">
+    <!-- Shadow when you do clic on btn-hambuger -->
+    <div class="overlay" [class.fade-in] = "showOverlay" [class.fade-out]="!showOverlay"></div>
+    <!-- navbar structure -->
+    <nav class="flex flex-jc-sb flex-ai-c">
+        <!-- By http://www.adsforwax.com/DigitalHotSheet/Digital_Hot_Sheet_20140915.pdf, page 20, Fair use, https://en.wikipedia.org/w/index.php?curid=42689037 -->
+        <a href="/" class="header__logo">
+            <img src="../../../assets/images/Studio_Ghibli_logo.svg" alt="ghibli_studio_logo">
+        </a>
+        <!-- btn for mobile -->
+        <a id="btnHamburger" (click)="cambiarFormaHamb($event)" class="header__menu hide-for-desktop">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <!-- No visible in mobile -->
+        <div class="header__links hide-for-mobile">
+            <a href="#">Home</a>
+            <a href="#">Films</a>
+            <a href="#">Locations</a>
+            <a href="#">Vehicles</a>
+            <a href="#">Species</a>
+            <a href="#">People</a>
+        </div>
+        <!-- Button for Desktop -->
+        <a href="#" class="button header__cta hide-for-mobile">Search</a>
+    </nav>
+</header>
