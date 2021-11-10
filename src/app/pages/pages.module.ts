@@ -6,6 +6,7 @@ import { LocationsComponent } from './locations/locations.component';
 import { FilmsComponent } from './films/films.component';
 import { SpeciesComponent } from './species/species.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
+import { ComponentsModule } from '../components/components.module';
 
 
 
@@ -19,7 +20,8 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
     VehiclesComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentsModule
   ]
 })
 export class PagesModule { }
