@@ -3,11 +3,15 @@
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
-    <div class="swiper-slide" *ngFor="let film of films" >
-      <div class="films-description">
+    <div  class="swiper-slide film-banner" 
+          [ngStyle]="{'background-image': 'url('+film.movie_banner+')'}" 
+          *ngFor="let film of films" >
+
+      <div class="film-description">
         <h3>{{ film.title }}</h3>
         <p>{{ film.description | slice:0:200 }}...</p>
       </div>
+      
     </div>
   </div>
   <!-- If we need pagination -->

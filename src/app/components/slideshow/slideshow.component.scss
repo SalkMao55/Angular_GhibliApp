@@ -1,4 +1,30 @@
 .swiper {
-    width: 37.5rem;   // 600 px
-    height: 18.75rem; // 300 px
+  width: 37.5rem;   // 600 px
+  height: 18.75rem; // 300 px
+}
+
+.film {
+  // Default style for banner
+  &-banner {
+    background-size: 'cover';
   }
+  // For description
+  &-description {
+    background-color: rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    padding: 0.1875rem, 1.875rem;
+    position: absolute;
+    width: 100%;
+    // Title style
+    h3 {
+      color: white;
+      text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -2px black;
+    }
+    // Description style
+    p {
+      color: white;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    
+  }
+}
