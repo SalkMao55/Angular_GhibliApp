@@ -1,0 +1,26 @@
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div  class="swiper-slide film-banner" 
+          [ngStyle]="{'background-image': 'url('+film.movie_banner+')'}" 
+          *ngFor="let film of films" >
+
+      <div class="film-description">
+        <h3>{{ film.title }}</h3>
+        <p>{{ film.description | slice:0:200 }}...</p>
+      </div>
+      
+    </div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>

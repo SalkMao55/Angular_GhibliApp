@@ -9,8 +9,12 @@ import { FilmResponse } from '../interfaces/films-interface';
 export class FilmsService {
 
   constructor( private http: HttpClient ) { }
-
-  getFlims():Observable<FilmResponse>{
-    return this.http.get<FilmResponse>('https://ghibliapi.herokuapp.com/films/');
+  
+  /*
+    FilmResponse[]: Indicate that we are going to receive an Array of films
+    The Type returned from http.get() and getFlims() should be Observable<FilmResponse[]>
+  */
+  getFlims():Observable<FilmResponse[]>{
+    return this.http.get<FilmResponse[]>('https://ghibliapi.herokuapp.com/films/');
   }
 }
