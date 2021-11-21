@@ -42,7 +42,7 @@ export class SlideshowComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    console.log(this.films);
+    
   }
 
   // Move to pevious movie

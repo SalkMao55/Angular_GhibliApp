@@ -3,3 +3,7 @@
     <!-- We need define property "films" in component "app-slideshow" -->
     <app-slideshow [films]="films" ></app-slideshow>
 </div>
+
+<!-- Div for films -->
+<h1>Films</h1>
+<app-film-poster-grid *ngIf="films.length > 0" [films]="films" ></app-film-poster-grid>
