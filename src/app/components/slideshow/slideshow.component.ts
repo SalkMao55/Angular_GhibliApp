@@ -11,12 +11,14 @@ export class SlideshowComponent implements OnInit, AfterViewInit {
 
   // Input to get data property "films" from "pages/home"
   @Input () films?: FilmResponse[];
+  // Swiper with temporal initialize
+  public swiper: Swiper = new Swiper('',{});
 
   constructor() { }
 
   // Source after View was initializate
   ngAfterViewInit(): void {
-    const swiper = new Swiper('.swiper', {
+    this.swiper = new Swiper('.swiper', {
       // Optional parameters
       // direction: 'vertical',
       loop: true,
@@ -41,6 +43,16 @@ export class SlideshowComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     console.log(this.films);
+  }
+
+  // Move to pevious movie
+  onSlidePrev () {
+    this.swiper.slidePrev();
+  }
+
+  // Move to the next film
+  onSlideNext () {
+    this.swiper.slideNext();
   }
 
 }
