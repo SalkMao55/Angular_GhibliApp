@@ -3,6 +3,10 @@
   height: 18.75rem; // 300 px
 }
 
+.swiper-button-prev,.swiper-button-next {
+  color: white;
+}
+
 .film {
   // Default style for banner
   &-banner {
