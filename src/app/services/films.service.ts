@@ -8,6 +8,8 @@ import { FilmResponse } from '../interfaces/films-interface';
 })
 export class FilmsService {
 
+  url = 'http://192.168.3.61:3000';
+  oldUrl = 'https://ghibliapi.herokuapp.com/films/';
   constructor( private http: HttpClient ) { }
   
   /*
@@ -15,6 +17,6 @@ export class FilmsService {
     The Type returned from http.get() and getFlims() should be Observable<FilmResponse[]>
   */
   getFlims():Observable<FilmResponse[]>{
-    return this.http.get<FilmResponse[]>('https://ghibliapi.herokuapp.com/films/');
+    return this.http.get<FilmResponse[]>(`${this.url}/films`);
   }
 }
